@@ -1,5 +1,5 @@
 ---
-title: test post
+title: test post 2
 date: "22 Jan 2023"
 category: "molly test category"
 ---

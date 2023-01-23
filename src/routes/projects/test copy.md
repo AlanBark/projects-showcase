@@ -1,7 +1,7 @@
 ---
-title: test post
+title: Post personal
 date: "22 Jan 2023"
-category: "molly test category"
+category: "personal"
 ---
 
 Hello, I am _Post One._
