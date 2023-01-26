@@ -9,9 +9,7 @@
   
 </style>
 
-<h1>Projects</h1>
-
-<!-- {#each Object.entries(data.projects) as [category, projects]}
+{#each Object.entries(data.projects) as [category, projects]}
   <h2>{category}</h2>
   <ul>
     {#each projects as project}
@@ -20,4 +18,4 @@
       </li>
     {/each}
   </ul>
-{/each} -->
+{/each}

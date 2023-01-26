@@ -13,8 +13,13 @@
   :global(h1) {
     font-size: 2rem;
   }
+  .slot-container {
+    margin: 1rem;
+  }
 </style>
 
 <Header />
 
-<slot />
+<div class="slot-container">
+  <slot />
+</div>
