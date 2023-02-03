@@ -8,6 +8,7 @@
     display: flex;
     padding: 1rem;
     align-items: center;
+    background: none;
   }
   .nav {
     display: flex;

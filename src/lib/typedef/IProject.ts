@@ -3,4 +3,5 @@ export interface IProject {
   date: string;
   category: string;
   path: string;
+  thumbnail: string;
 }

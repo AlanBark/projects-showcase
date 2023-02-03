@@ -13,13 +13,12 @@
   :global(h1) {
     font-size: 2rem;
   }
-  .slot-container {
-    margin: 1rem;
+  :global(html) {
+    scroll-behavior: smooth;
   }
 </style>
 
-<Header />
-
-<div class="slot-container">
+<div class="bg">
+  <Header />
   <slot />
 </div>
