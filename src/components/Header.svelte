@@ -9,6 +9,11 @@
     padding: 1rem;
     align-items: center;
     background: none;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   .nav {
     display: flex;

@@ -15,69 +15,54 @@
     height: 100vh;
     width: 100vw;
   }
-  .parallax-container {
-    height: 100vh;
+  .parallax {
     overflow-y: auto;
     overflow-x: hidden;
-    perspective: 1px;
-    transform-style: preserve-3d;
-  }
-  .parallax-layer {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    min-height: 100px;
-  }
-  .parallax-far {
+    perspective: 100px;
+    height: 100vh;
     background-color: burlywood;
-    height: 80%;
-    width: 100%;
-    top: 0px;
-    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
   }
-  .parallax-layer.l1 {
+  .layer {
+    height: 300px;
+  }
+  .content {
     height: 100rem;
-    background-color: red;
-    transform: translateZ(0);
-    scale: 1;
+    background-color: rebeccapurple;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: block;
+    position: absolute;
   }
-  .parallax-layer.l2 {
-    background-color: yellow;
-    transform: translateZ(-1px);
-    top: 10rem;
-    scale: 1;
-  }
-  .parallax-layer.l3 {
-    background-color: green;
-    transform: translateZ(-2px);
-    top: 50rem;
-    scale: 1;
-  }
-  .showcase {
+  .l1 {
+    transform: translateZ(0px);
     background-color: blue;
   }
-  .message {
-    background-color: green;
+  .l2 {
+    transform: translateZ(-100px);
+    scale: 2;
+    background-color: red;
   }
-  .footer {
-    background-color: black;
+  .l3 {
+    transform: translateZ(-200px);
+    background-color: green;
+    scale: 3;
   }
 </style>
 
-<div class="content">
-  <section class="splash full">
-    <div class="parallax-far"></div>
-    <div class="parallax-container">
-      <div class="parallax-layer l1"></div>
-      <div class="parallax-layer l2"></div>
-      <div class="parallax-layer l3"></div>
-      <div class="parallax-content">
-        <h1>Parallax test</h1>
-      </div>
-    </div>
-  </section>
+<div class="parallax">
+  <div class="layer l3"></div>
+  <div class="layer l2"></div>
+  <div class="layer l1"></div>
+  <div class="content">
+    <h1>Hello World</h1>
+  </div>
   <!-- <section class="showcase full">
 
   </section>
