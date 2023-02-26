@@ -10,7 +10,7 @@
     align-items: center;
     background: none;
     z-index: 100;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;

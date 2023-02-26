@@ -1,77 +1,85 @@
 <script lang="ts">
 
 </script>
-<style>
-  .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+<style lang="scss">
+@use "sass:math";
+
+$perspective: 1px;
+$close: #111818;
+//#04724D #B8DBD9
+$far: #04724D;
+
+.parallax {
+  perspective: $perspective;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-style: preserve-3d;
+  background-color: rgb(253, 251, 229);
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -50%;
+  left: 0;
+}
+
+.parallax_cover{
+  background: $close;
+  display: block;
+  position: absolute;
+  top: 400%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+  transform: translateZ(-2px) scale(3);
+}
+
+$layers: 6;
+
+@for $i from 0 through $layers {
+  $x: math.div($layers - $i, 2);
+  $color: mix($close, $far, math.div($i, $layers) * 100 * 1%);
+  .layer_#{$i}{
+    transform: translateZ(-2 * $x - 2px) scale($layers - $i + 3);
+    background-image: linear-gradient(135deg, transparent 66%, $color 66.01%), linear-gradient(45deg, $color 34%, transparent 34.01%);
+      background-position: $x*200px $x*120*-1px;
+      background-size: 200px 100%;
+      background-repeat:repeat-x;
   }
-  section.full {
-    height: 100vh;
-    width: 100vw;
-  }
-  .parallax {
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 100px;
-    height: 100vh;
-    background-color: burlywood;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-  }
-  .layer {
-    height: 300px;
-  }
-  .content {
-    height: 100rem;
-    background-color: rebeccapurple;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    display: block;
-    position: absolute;
-  }
-  .l1 {
-    transform: translateZ(0px);
-    background-color: blue;
-  }
-  .l2 {
-    transform: translateZ(-100px);
-    scale: 2;
-    background-color: red;
-  }
-  .l3 {
-    transform: translateZ(-200px);
-    background-color: green;
-    scale: 3;
-  }
+}
+
 </style>
 
 <div class="parallax">
-  <div class="layer l3"></div>
-  <div class="layer l2"></div>
-  <div class="layer l1"></div>
-  <div class="content">
-    <h1>Hello World</h1>
+  <div class="layer layer_0">
   </div>
-  <!-- <section class="showcase full">
-
-  </section>
-  <section class="message full">
-
-  </section>
-  <section class="footer full">
-
-  </section> -->
+  <div class="layer layer_1">
+  </div>
+  <div class="layer layer_2">
+  </div>
+  <div class="layer layer_3">
+  </div>
+  <div class="layer layer_4">
+  </div>
+  <div class="layer layer_5">
+  </div>
+  <div class="layer layer_6">
+  </div>
+  <div class="parallax_cover">
+    <section>
+      <h1>Parallax</h1>
+      <p>Scroll down to see the effect</p>
+    </section>
+  </div>
 </div>
 
 
