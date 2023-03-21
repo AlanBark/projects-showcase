@@ -48,7 +48,7 @@ onMount(() => {
 $perspective: 1px;
 $close: #111818;
 //#04724D #B8DBD9
-$far: #04724D;
+$far: rgb(196, 150, 120);
 
 .parallax {
   perspective: $perspective;
@@ -72,6 +72,8 @@ $far: #04724D;
   width: 100vw;
   visibility: hidden;
   opacity: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .layer.visible {
@@ -90,20 +92,6 @@ $far: #04724D;
   z-index: 2;
   transform: translateZ(-2px) scale(3);
 }
-
-$layers: 8;
-
-// @for $i from 0 through $layers {
-//   $x: math.div($layers - $i, 2);
-//   $color: mix($close, $far, math.div($i, $layers) * 100 * 1%);
-  // .layer_#{$i}{
-  //   transform: translateZ(-2 * $x - 2px) scale($layers - $i + 3);
-    // background-image: linear-gradient(135deg, transparent 66%, $color 66.01%), linear-gradient(45deg, $color 34%, transparent 34.01%);
-    //   background-position: $x*200px $x*120*-1px;
-    //   background-size: 200px 100%;
-    //   background-repeat:repeat-x;
-  // }
-// }
 
 .layer_0 {
   transform: translateZ(-2px) scale(3);
@@ -143,33 +131,69 @@ $layers: 8;
   transition: opacity 0.6s;
 }
 
+.text_layer {
+  transform: translateZ(-2px) scale(3);
+  transition: opacity 0.9s;
+  display: block;
+}
+
+.text_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 25%;
+  color: $far;
+  font-size: 10rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.text_right {
+  justify-content: flex-end;
+  width: 95%;
+  height: 80%;
+  align-items: end;
+}
+
 </style>
 
 <!-- You could definitely make a component per layer, but the boilerplate looks uglier than this -->
 <div class="parallax" bind:this={parallax}>
+  <div class="layer text_layer" class:visible="{layerVisible === true}">
+    <div class="text_container">
+      <h1>Hello, I'm</h1>
+    </div>
+  </div>
+  <div class="layer text_layer" class:visible="{layerVisible === true}">
+    <div class="text_container text_right">
+      <h1>I make things that matter (sometimes)</h1>
+    </div>
+  </div>
   <div class="layer layer_0" class:visible="{layerVisible === true}">
-    <img src="/a1.svg" alt="left A" style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/a1.svg" alt="left A" style="width: 80%; height: 100%; object-fit: contain;">
   </div>
   <div class="layer layer_1" class:visible="{layerVisible === true}">
-    <img src="/a2.svg" alt="right A" style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/a2.svg" alt="right A" style="width: 80%; height: 100%; object-fit: contain;">
   </div>
   <div class="layer layer_2" class:visible="{layerVisible === true}">
-    <img src="/l1.svg" alt="left L" style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/l1.svg" alt="left L" style="width: 80%; height: 100%; object-fit: contain;">
   </div>
   <div class="layer layer_3" class:visible="{layerVisible === true}">
-    <img src="/l2.svg" alt="right L" style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/l2.svg" alt="right L" style="width: 80%; height: 100%; object-fit: contain;">
   </div>
   <div class="layer layer_4" class:visible="{layerVisible === true}">
-    <img src="/e1.svg" alt="Left E" style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/e1.svg" alt="Left E" style="width: 80%; height: 100%; object-fit: contain;">
   </div> 
   <div class="layer layer_5" class:visible="{layerVisible === true}">
-    <img src="/e2.svg" alt="Right E" style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/e2.svg" alt="Right E" style="width: 80%; height: 100%; object-fit: contain;">
   </div>
   <div class="layer layer_7" class:visible="{layerVisible === true}">
-    <img src="/c2.svg" alt="Left C" style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/c2.svg" alt="Left C" style="width: 80%; height: 100%; object-fit: contain;">
   </div>
   <div class="layer layer_6" class:visible="{layerVisible === true}">
-    <img src="/c1.svg" alt="Right C" style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/c1.svg" alt="Right C" style="width: 80%; height: 100%; object-fit: contain;">
   </div>
   <div class="parallax_cover">
     <section>
