@@ -3,13 +3,21 @@
 import { onMount } from 'svelte';
 
 let parallax: HTMLElement;
+// layers are hidden until the page scrolls, otherwise you get a 'snap'
 let layerVisible: boolean = false;
+// controls for recenter button visibility. Since both user scrolling and the recenter trigger the scroll event, this gets a little messy
+let setup = false;
+let recenterVisible = false;
+let recentering = false;
+let aligned = 0;
+// percentage of the total height of the parallax div that the layers should be aligned to
+const coefficient = 0.2494;
 
-// Smooth scroll to a position where all layers are aligned.
-function alignLayers(alignedY: number, parallax: HTMLElement) {
+// Smooth scroll within a div to a specific position
+function smoothScroll(y: number, element: HTMLElement) {
 
-  let startY = parallax.scrollTop;
-  let diff = alignedY - startY;
+  let startY = element.scrollTop;
+  let diff = y - startY;
   let duration = 1000;
   let start: number | null = null;
 
@@ -22,23 +30,46 @@ function alignLayers(alignedY: number, parallax: HTMLElement) {
     let time = timestamp - start;
     let percent = Math.min(time / duration, 1);
     percent = easeOutCubic(percent);
-    parallax.scrollTo(0, startY + diff * percent);
+    element.scrollTo(0, startY + diff * percent);
     if (time < duration) {
       requestAnimationFrame(step);
     }
   })
 }
 
+// handle recenter button click and initial animation
+function alignLayers() {
+  recentering = true;
+  recenterVisible = false;
+  smoothScroll(aligned, parallax);
+}
 
+// handle when to show recenter button
+function handleScroll() {
+  // never show on initial animation. Give some leeway to account for rounding errors
+  if (!setup && parallax.scrollTop > aligned - 10 && parallax.scrollTop < aligned + 10) {
+    setup = true;
+    recentering = false;
+    console.log('centered')
+  }
+  // hide when aligned after initial animation. 
+  if (setup && recentering && parallax.scrollTop > aligned - 10 && parallax.scrollTop < aligned + 10) {
+    recentering = false;
+    console.log('recentered')
+  }
+  // show when not aligned after initial animation
+  if (setup && !recentering && !recenterVisible && (parallax.scrollTop < aligned - 10 || parallax.scrollTop > aligned + 10)) {
+    recenterVisible = true;
+    console.log('recenter visible')
+  }
+}
 
 onMount(() => {
-  // Change based on height of each layer. Resultion dictates how accurate the alignment will be.
-  // Easiest to just align the layers manually, then divide the scroll pos by the total height.
+  aligned = Math.floor(parallax.clientHeight * coefficient);
+  // Starting further down the page gives the effect of layers 'falling' down as you scroll up.
   parallax.scrollTo(0, 1000);
   layerVisible = true;
-  const coefficient = 0.2494;
-  let aligned = Math.floor(parallax.clientHeight * coefficient);
-  alignLayers(aligned, parallax);
+  alignLayers();
 });
 
 </script>
@@ -153,14 +184,43 @@ $far: rgb(196, 150, 120);
 .text_right {
   justify-content: flex-end;
   width: 95%;
-  height: 80%;
+  height: 78%;
   align-items: end;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150%;
+  width: 100%;
+  text-align: center;
+  z-index: 3000;
+}
+
+.mybutton {
+  background-color: $far;
+  color: $close;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.mybutton:hover {
+  background-color: $close;
+  color: $far;
+  cursor: pointer;
 }
 
 </style>
 
 <!-- You could definitely make a component per layer, but the boilerplate looks uglier than this -->
-<div class="parallax" bind:this={parallax}>
+<div class="parallax" bind:this={parallax} on:scroll={handleScroll}>
   <div class="layer text_layer" class:visible="{layerVisible === true}">
     <div class="text_container">
       <h1>Hello, I'm</h1>
@@ -168,7 +228,7 @@ $far: rgb(196, 150, 120);
   </div>
   <div class="layer text_layer" class:visible="{layerVisible === true}">
     <div class="text_container text_right">
-      <h1>I make things that matter (sometimes)</h1>
+      <h1>I make things that (sometimes) matter</h1>
     </div>
   </div>
   <div class="layer layer_0" class:visible="{layerVisible === true}">
@@ -194,6 +254,11 @@ $far: rgb(196, 150, 120);
   </div>
   <div class="layer layer_6" class:visible="{layerVisible === true}">
     <img src="/c1.svg" alt="Right C" style="width: 80%; height: 100%; object-fit: contain;">
+  </div>
+  <div class="layer text_layer" class:visible="{recenterVisible === true}">
+    <div class="button_container">
+      <button class="mybutton" on:click={alignLayers}>center</button>
+    </div>
   </div>
   <div class="parallax_cover">
     <section>
