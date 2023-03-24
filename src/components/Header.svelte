@@ -27,9 +27,13 @@
     text-decoration: none;
     color: black;
     text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
   }
   .is-active {
     color: rgb(12, 124, 119);
+  }
+  a:hover {
+    color: rgb(14, 156, 149);
   }
   svg {
     width: 2.5rem;
