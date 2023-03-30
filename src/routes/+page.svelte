@@ -135,6 +135,7 @@ $right: #7e8981;
   height: 2000px;
   z-index: 2;
   transform: translateZ(-2px) scale(3);
+  background-color: $left;
 }
 
 .layer_0 {

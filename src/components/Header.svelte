@@ -10,14 +10,21 @@
     width: auto;
     display: flex;
     padding: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     align-items: center;
     justify-content: space-between;
-    background: none;
     z-index: 100;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+  }
+  .header-desktop {
+    background: inherit;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   }
   .header-mobile {
     border-top-right-radius: 8px;
