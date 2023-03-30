@@ -70,6 +70,16 @@ onMount(() => {
   parallax.scrollTo(0, 1000);
   layerVisible = true;
   alignLayers();
+
+  window.addEventListener('resize', () => {
+    aligned = Math.floor(parallax.clientHeight * coefficient);
+  });
+
+  return () => {
+    window.removeEventListener('resize', () => {
+      aligned = Math.floor(parallax.clientHeight * coefficient);
+    });
+  }
 });
 
 </script>
@@ -80,6 +90,9 @@ $perspective: 1px;
 $close: #111818;
 //#04724D #B8DBD9
 $far: rgb(196, 150, 120);
+$top: #f1af8c;
+$left: #b49481;
+$right: #7e8981;
 
 .parallax {
   perspective: $perspective;
@@ -116,7 +129,7 @@ $far: rgb(196, 150, 120);
   background: $close;
   display: block;
   position: absolute;
-  top: 450%;
+  top: 450vh;
   left: 0;
   right: 0;
   height: 2000px;
