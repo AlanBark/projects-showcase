@@ -129,7 +129,7 @@ $right: #7e8981;
   background: $close;
   display: block;
   position: absolute;
-  top: 450vh;
+  top: 500vh;
   left: 0;
   right: 0;
   height: 2000px;
@@ -228,6 +228,16 @@ $right: #7e8981;
   background-color: $close;
   color: $far;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .text_container {
+    width: 100%;
+    height: 75%;
+  }
+  .text_right {
+    height: 70%;
+  }
 }
 
 </style>
