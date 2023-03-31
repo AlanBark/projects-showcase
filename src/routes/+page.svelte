@@ -38,49 +38,11 @@ function smoothScroll(y: number, element: HTMLElement) {
   })
 }
 
-// handle recenter button click and initial animation
-function alignLayers() {
-  recentering = true;
-  recenterVisible = false;
-  smoothScroll(aligned, parallax);
-}
-
-// handle when to show recenter button
-function handleScroll() {
-  // never show on initial animation. Give some leeway to account for rounding errors
-  if (!setup && parallax.scrollTop > aligned - 10 && parallax.scrollTop < aligned + 10) {
-    setup = true;
-    recentering = false;
-    console.log('centered')
-  }
-  // hide when aligned after initial animation. 
-  if (setup && recentering && parallax.scrollTop > aligned - 10 && parallax.scrollTop < aligned + 10) {
-    recentering = false;
-    console.log('recentered')
-  }
-  // show when not aligned after initial animation
-  if (setup && !recentering && !recenterVisible && (parallax.scrollTop < aligned - 10 || parallax.scrollTop > aligned + 10)) {
-    recenterVisible = true;
-    console.log('recenter visible')
-  }
-}
-
 onMount(() => {
-  aligned = Math.floor(parallax.clientHeight * coefficient);
   // Starting further down the page gives the effect of layers 'falling' down as you scroll up.
   parallax.scrollTo(0, 1000);
+  smoothScroll(0, parallax);
   layerVisible = true;
-  alignLayers();
-
-  window.addEventListener('resize', () => {
-    aligned = Math.floor(parallax.clientHeight * coefficient);
-  });
-
-  return () => {
-    window.removeEventListener('resize', () => {
-      aligned = Math.floor(parallax.clientHeight * coefficient);
-    });
-  }
 });
 
 </script>
@@ -115,7 +77,7 @@ $highlight: #1e9c74;
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0%;
+  bottom: -0.5%;
   left: 0;
   width: 100vw;
   visibility: hidden;
@@ -207,32 +169,9 @@ $highlight: #1e9c74;
 .text_right {
   justify-content: flex-end;
   width: 95%;
-  height: 78%;
+  height: 90%;
   align-items: end;
-}
-.button_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150%;
-  width: 100%;
-  text-align: center;
-  z-index: 3000;
-}
-.mybutton {
-  background-color: $highlight;
-  color: $bg;
-  border: none;
-  border-radius: 1.5rem;
-  padding: 0.7rem 1rem;
-  font-size: 1rem;
-  font-weight: 300;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-}
-.mybutton:hover {
-  background-color: #21cc9b;
+  font-size: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -242,6 +181,7 @@ $highlight: #1e9c74;
   }
   .text_right {
     height: 70%;
+    font-size: 1.5rem;
   }
 }
 .personal {
@@ -264,7 +204,7 @@ $highlight: #1e9c74;
 </style>
 
 <!-- You could definitely make a component per layer, but the boilerplate looks uglier than this -->
-<div class="parallax" bind:this={parallax} on:scroll={handleScroll}>
+<div class="parallax" bind:this={parallax}>
   <HeaderDesktop />
   <div class="layer text_layer" class:visible="{layerVisible === true}">
     <div class="text_container">
@@ -273,7 +213,7 @@ $highlight: #1e9c74;
   </div>
   <div class="layer text_layer" class:visible="{layerVisible === true}">
     <div class="text_container text_right">
-      <h1>I make things that (sometimes) matter</h1>
+      <h2>I make things that (sometimes) matter</h2>
     </div>
   </div>
   <div class="layer background_layer visible">
@@ -301,11 +241,6 @@ $highlight: #1e9c74;
   </div>
   <div class="layer layer_6" class:visible="{layerVisible === true}">
     <img src="/c1dark.svg" alt="Right C" style="width: 80%; height: 100%; object-fit: contain;">
-  </div>
-  <div class="layer text_layer" class:visible="{recenterVisible === true}">
-    <div class="button_container">
-      <button class="mybutton" on:click={alignLayers}>center</button>
-    </div>
   </div>
   <div class="parallax_cover">
     <!-- <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">

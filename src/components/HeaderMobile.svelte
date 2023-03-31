@@ -15,12 +15,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: $highlight;
+    color: #000000;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     padding: 0.4rem 0.5rem 0.2rem 1rem;
     margin-top: 2rem;
-    background-color: #f1af8c;
+    background-color: $highlight;
     right: auto;
   }
   .nav-icon {
@@ -28,7 +28,7 @@
   }
   .sidebar-mobile {
     width: 0%;
-    background-color: #f1af8c;
+    background-color: $highlight;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,11 +40,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 3rem;
   }
   .sidebar-mobile a {
     text-decoration: none;
     color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
   }
