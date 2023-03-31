@@ -38,6 +38,11 @@ function smoothScroll(y: number, element: HTMLElement) {
   })
 }
 
+function scrollToContent() {
+  // Scroll to the top of the content
+  smoothScroll(innerHeight * 3, parallax);
+}
+
 onMount(() => {
   // Starting further down the page gives the effect of layers 'falling' down as you scroll up.
   parallax.scrollTo(0, 1000);
@@ -102,14 +107,14 @@ $highlight: #1e9c74;
   height: 2000px;
   z-index: 2;
   transform: translateZ(-2px) scale(3);
-  background-color: $bg;
+  background-color: #001520;
 }
 
 .background_layer {
   background-color: $bg;
   transform: translateZ(-2px) scale(3);
   background: linear-gradient(0, #001927, #000000);
-  height: 150vh;
+  height: 180vh;
   bottom: -50%;
   width: 100vw;
   bottom: 0;
@@ -173,17 +178,6 @@ $highlight: #1e9c74;
   align-items: end;
   font-size: 2rem;
 }
-
-@media only screen and (max-width: 768px) {
-  .text_container {
-    width: 100%;
-    height: 75%;
-  }
-  .text_right {
-    height: 70%;
-    font-size: 1.5rem;
-  }
-}
 .personal {
   display: flex;
   justify-content: center;
@@ -203,6 +197,25 @@ $highlight: #1e9c74;
 }
 .highlight {
   color: white;
+}
+.arrow {
+  transform: translateZ(-2px) scale(3);
+  transition: opacity 0.9s;
+  top: 180%;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .text_container {
+    width: 100%;
+    height: 75%;
+  }
+  .text_right {
+    height: 70%;
+    font-size: 1.5rem;
+  }
+  .arrow {
+    top: 135%;
+  }
 }
 </style>
 
@@ -245,7 +258,10 @@ $highlight: #1e9c74;
   <div class="layer layer_6" class:visible="{layerVisible === true}">
     <img src="/c1dark.svg" alt="Right C" style="width: 80%; height: 100%; object-fit: contain;">
   </div>
-  <div class="parallax_cover">
+  <div class="layer arrow" class:visible="{layerVisible === true}">
+    <svg on:click={scrollToContent} on:keypress={scrollToContent} id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="21.3" height="34.3" viewBox="0 0 63.4 103"><defs><style>.cls-1{fill:none;stroke:#1e9c74;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><polyline class="cls-1" points="31.6 1.5 31.6 101.5 61.9 71.2"/><line class="cls-1" x1="31.6" y1="101.5" x2="1.5" y2="71.4"/></svg>
+  </div>
+  <div class="parallax_cover" id="content">
     <!-- <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
       <div class="info-card">
         <h2>Education</h2>
