@@ -182,18 +182,21 @@ $highlight: #1e9c74;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 .info-card {
-  background-color: $top;
+  background-color: none;
+  border: 1px solid rgb(95, 95, 95);
   padding: 1rem;
-  height: 100px;
+  height: 100%;
   width: 300px;
+  color: #9aa3a5;
+  border-radius: 5px;
 }
 .info-card h2 {
   font-size: 1.5rem;
   font-weight: 900;
-  color: $bg;
+  color: white;
 }
 .highlight {
   color: white;
@@ -262,10 +265,15 @@ $highlight: #1e9c74;
     <svg on:click={scrollToContent} on:keypress={scrollToContent} id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="21.3" height="34.3" viewBox="0 0 63.4 103"><defs><style>.cls-1{fill:none;stroke:#1e9c74;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><polyline class="cls-1" points="31.6 1.5 31.6 101.5 61.9 71.2"/><line class="cls-1" x1="31.6" y1="101.5" x2="1.5" y2="71.4"/></svg>
   </div>
   <div class="parallax_cover" id="content">
-    <!-- <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
+    <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
       <div class="info-card">
         <h2>Education</h2>
-        <h3>Bachelor</h3>
+        <h3>Queensland University of Technology</h3>
+        <h4>Bachelor of IT in Computer Science / Dec 2022</h4>
+        <ul>
+          <li>Honors: GPA 6.6</li>
+          <li>Min Networks and Security</li>
+        </ul>
       </div>
       <div class="info-card">
         <h2>Work</h2>
@@ -275,7 +283,7 @@ $highlight: #1e9c74;
       </div>
     </section>
     <section>
-    </section> -->
+    </section>
   </div>
 </div> 
 
