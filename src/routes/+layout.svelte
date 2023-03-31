@@ -1,7 +1,7 @@
 <script lang="ts">
   import "../app.postcss";
   import "@fontsource/quicksand";
-  import Header from "../components/Header.svelte";
+  import HeaderMobile from "../components/HeaderMobile.svelte";
 </script>
 
 <style>
@@ -19,6 +19,6 @@
 </style>
 
 <div class="bg">
-  <Header />
+  <HeaderMobile />
   <slot />
 </div>
