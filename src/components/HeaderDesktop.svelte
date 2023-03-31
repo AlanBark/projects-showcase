@@ -43,15 +43,45 @@
     width: 2.5rem;
     height: auto;
   }
+  .outline svg {
+    display: none;
+  }
+  .outline {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $highlight;
+    text-decoration: none;
+  }
   @media only screen and (max-width: 768px) {
-    .header-desktop {
+    .nav {
       display: none;
-    } 
+    }
+    .git {
+      display: none;
+    }
+    .header-desktop {
+      flex-direction: row-reverse;
+      padding: 2.5rem 2rem;
+    }
+    .outline {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0rem;
+    }
+    .outline svg {
+      display: block;
+    }
   }
 </style>
 
 <div class="header-desktop">
-  <p>Alec Parkes</p>
+  <a class="outline" href="/contact">
+    <p>Alec Parkes</p>
+    <!-- Redirect svg -->
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="20" height="20" viewBox="0 0 91.1 91.1"><defs><style>.cls-1{fill:none;stroke:#1e9c74;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}</style></defs><polyline class="cls-1" points="81.4 43.8 81.4 89.6 1.5 89.6 1.5 9.6 46.7 9.6"/><polyline class="cls-1" points="41.4 49.6 89.6 1.5 89.6 34.6"/><line class="cls-1" x1="89.6" y1="1.5" x2="56.4" y2="1.5"/></svg>
+  </a>
   <nav class="nav">
     <a href="/" class:is-active={$page.url.pathname === "/"}>Home</a>
     <a href="/projects" class:is-active={$page.url.pathname === "/projects"}>Projects</a>

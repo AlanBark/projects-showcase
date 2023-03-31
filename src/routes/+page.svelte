@@ -201,6 +201,9 @@ $highlight: #1e9c74;
   font-weight: 900;
   color: $bg;
 }
+.highlight {
+  color: white;
+}
 </style>
 
 <!-- You could definitely make a component per layer, but the boilerplate looks uglier than this -->
@@ -213,7 +216,7 @@ $highlight: #1e9c74;
   </div>
   <div class="layer text_layer" class:visible="{layerVisible === true}">
     <div class="text_container text_right">
-      <h2>I make things that (sometimes) matter</h2>
+      <h2>I make <span class="highlight">web</span> things that (sometimes) matter</h2>
     </div>
   </div>
   <div class="layer background_layer visible">
