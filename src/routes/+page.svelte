@@ -207,6 +207,27 @@ $highlight: #1e9c74;
   top: 180%;
   cursor: pointer;
 }
+.intro {
+  color: $top;
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 0% 25% 0% 25%;
+}
+.intro-sec {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+.intro .highlight {
+  color: $highlight;
+}
+.intro-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0% 10% 0% 10%;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 @media only screen and (max-width: 768px) {
   .text_container {
     width: 100%;
@@ -232,7 +253,7 @@ $highlight: #1e9c74;
   </div>
   <div class="layer text_layer" class:visible="{layerVisible === true}">
     <div class="text_container text_right">
-      <h2>I make <span class="highlight">web</span> things that (sometimes) matter</h2>
+      <h2>I make <span class="highlight">web</span> things that matter</h2>
     </div>
   </div>
   <div class="layer background_layer visible">
@@ -265,21 +286,50 @@ $highlight: #1e9c74;
     <svg on:click={scrollToContent} on:keypress={scrollToContent} id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="21.3" height="34.3" viewBox="0 0 63.4 103"><defs><style>.cls-1{fill:none;stroke:#1e9c74;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><polyline class="cls-1" points="31.6 1.5 31.6 101.5 61.9 71.2"/><line class="cls-1" x1="31.6" y1="101.5" x2="1.5" y2="71.4"/></svg>
   </div>
   <div class="parallax_cover" id="content">
+    <section class="intro" role="contentinfo" aria-label="Intro about me">
+      <p class="intro-sec"><span class="highlight">Alec Parkes</span> is a full stack Web Developer, Client Development Officer and tech enthusiast, currently based in Brisbane.</p>
+      <div class="intro-sec">
+        <div class="intro-col">
+          <p>SDL Technology</p>
+          <p>Web Developer & Client Consult, 2020 - 2022</p>
+        </div>
+        <div class="intro-col">
+          <p>QUT</p>
+          <p>Bachelor of IT Maj CompSci (6.6), 2022 </p>
+        </div>
+      </div>
+      <p class="intro-sec">My passion for technology and problem solving has led me to take on a wide variety of roles during my employments...</p>
+    </section>
     <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
       <div class="info-card">
         <h2>Education</h2>
         <h3>Queensland University of Technology</h3>
         <h4>Bachelor of IT in Computer Science / Dec 2022</h4>
         <ul>
-          <li>Honors: GPA 6.6</li>
+          <li>GPA 6.6</li>
           <li>Min Networks and Security</li>
         </ul>
       </div>
       <div class="info-card">
         <h2>Work</h2>
+        <h3>SDL Technology - Full Stack Web Developer / 2020 - 2022</h3>
+        <h4>Skills used here</h4>
+        <h3>QUT - Tutor / 2023 - Current</h3>
       </div>
       <div class="info-card">
-        <h2>Personal Achievements</h2>
+        <h2>Personal Skillset</h2>
+        <ul>
+          <li>Strong interpersonal & communication skills</li>
+          <li>Real world experience maintaining and developing websites for 
+            small, medium, and enterprise level businesses. 
+          </li>
+          <li>Comfortable with SVN, GIT, various Linux and Windows 
+            (server) environments</li>
+          <li>Experience with Agile development methodologies</li>
+          <li>Experience with various full stack web technologies including HTML, CSS, 
+            Js, PHP, and SQL</li>
+
+        </ul>
       </div>
     </section>
     <section>
