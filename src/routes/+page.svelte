@@ -1,6 +1,7 @@
 <script lang="ts">
 
 import { onMount } from 'svelte';
+import Footer from '../components/Footer.svelte';
 import HeaderDesktop from '../components/HeaderDesktop.svelte';
 
 let parallax: HTMLElement;
@@ -55,7 +56,7 @@ onMount(() => {
 
 $perspective: 1px;
 // Height of parallax. This is smaller than the value due to the 3d effect.
-$cover_start: 500vh;
+$cover_start: 450vh;
 
 $bg: #001927;
 // match 3d svg colors
@@ -75,7 +76,7 @@ $highlight: #1e9c74;
   top: 0;
   left: 0;
   transform-style: preserve-3d;
-  background: red;
+  background: $bg;
 }
 
 .layer {
@@ -89,6 +90,7 @@ $highlight: #1e9c74;
   opacity: 0;
   display: flex;
   justify-content: center;
+  z-index: 50;
 }
 
 .layer.visible {
@@ -104,10 +106,8 @@ $highlight: #1e9c74;
   top: $cover_start;
   left: 0;
   right: 0;
-  height: 2000px;
   z-index: 2;
   transform: translateZ(-2px) scale(3);
-  background-color: #001520;
 }
 
 .background_layer {
@@ -132,6 +132,7 @@ $highlight: #1e9c74;
 }
 .layer_2 {
   transition: opacity 1s;
+  transform: translateZ(0px) scale(1);
 }
 .layer_3 {
   transform: translateZ(-1px) scale(2);
@@ -146,6 +147,7 @@ $highlight: #1e9c74;
   transition: opacity 0.2s;
 }
 .layer_6 {
+  transform: translateZ(0px) scale(1);
   transition: opacity 1s;
 }
 .layer_7 {
@@ -212,10 +214,14 @@ $highlight: #1e9c74;
   font-size: 1.7rem;
   text-align: center;
   margin: 0% 25% 0% 25%;
+  margin-bottom: 3rem;
+}
+.intro a {
+  color: $highlight;
+  font-size: 1rem;
 }
 .intro-sec {
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 .intro .highlight {
   color: $highlight;
@@ -287,18 +293,19 @@ $highlight: #1e9c74;
   </div>
   <div class="parallax_cover" id="content">
     <section class="intro" role="contentinfo" aria-label="Intro about me">
-      <p class="intro-sec"><span class="highlight">Alec Parkes</span> is a full stack Web Developer, Client Development Officer and tech enthusiast, currently based in Brisbane.</p>
+      <p class="intro-sec"><span class="highlight">Alec Parkes</span> is a full stack Web Developer, Client Development Liason and tech enthusiast, currently based in Brisbane.</p>
       <div class="intro-sec">
         <div class="intro-col">
-          <p>SDL Technology</p>
-          <p>Web Developer & Client Consult, 2020 - 2022</p>
+          <p class="highlight">SDL Technology</p>
+          <p>Web Developer & Client Liason, 2020 - 2022</p>
         </div>
         <div class="intro-col">
-          <p>QUT</p>
-          <p>Bachelor of IT Maj CompSci (6.6), 2022 </p>
+          <p class="highlight">QUT</p>
+          <p>Bachelor of IT, Major in CompSci (6.6), 2022 </p>
         </div>
       </div>
-      <p class="intro-sec">My passion for technology and problem solving has led me to take on a wide variety of roles during my employments...</p>
+      <p class="intro-sec">My passion for technology and problem solving has led me to take on a wide variety of roles during my employment</p>
+      <a href="/projects/workSDL">Read More</a>
     </section>
     <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
       <div class="info-card">
@@ -328,12 +335,12 @@ $highlight: #1e9c74;
           <li>Experience with Agile development methodologies</li>
           <li>Experience with various full stack web technologies including HTML, CSS, 
             Js, PHP, and SQL</li>
-
         </ul>
       </div>
     </section>
     <section>
     </section>
+    <Footer />
   </div>
 </div> 
 
