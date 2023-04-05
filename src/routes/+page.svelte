@@ -123,35 +123,35 @@ $highlight: #1e9c74;
 
 // Layer distance from 'camera'
 .layer_0 {
-  transform: translateZ(-2px) scale(3);
+  transform: translate3d(0px,0px,-2px) scale(3);
   transition: opacity 1s;
 }
 .layer_1 {
-  transform: translateZ(-1px) scale(2);
+  transform: translate3d(0px,0px,-1px) scale(2);
   transition: opacity 1.3s;
 }
 .layer_2 {
   transition: opacity 1s;
-  transform: translateZ(-1px) scale(2);
+  transform: translate3d(0px,0px,-1px) scale(2);
 }
 .layer_3 {
-  transform: translateZ(0px) scale(1);
+  transform: translate3d(0px,0px,0px) scale(1);
   transition: opacity 0.6s;
 }
 .layer_4 {
   transition: opacity 0.9s;
-  transform: translateZ(-2px) scale(3);
+  transform: translate3d(0px,0px,-2px) scale(3);
 }
 .layer_5 {
-  transform: translateZ(0px) scale(1);
+  transform: translate3d(0px,0px,0px) scale(1);
   transition: opacity 0.2s;
 }
 .layer_6 {
-  transform: translateZ(0px) scale(1);
+  transform: translate3d(0px,0px,0px) scale(1);
   transition: opacity 1s;
 }
 .layer_7 {
-  transform: translateZ(-1px) scale(2);
+  transform: translate3d(0px,0px,-1px) scale(2);
   transition: opacity 0.6s;
 }
 .text_layer {
