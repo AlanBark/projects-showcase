@@ -41,7 +41,7 @@ function smoothScroll(y: number, element: HTMLElement) {
 
 function scrollToContent() {
   // Scroll to the top of the content
-  smoothScroll(innerHeight * 3, parallax);
+  smoothScroll(innerHeight * 1.6, parallax);
 }
 
 onMount(() => {
@@ -56,7 +56,7 @@ onMount(() => {
 
 $perspective: 1px;
 // Height of parallax. This is smaller than the value due to the 3d effect.
-$cover_start: 450vh;
+$cover_start: 230vh;
 
 $bg: #001927;
 // match 3d svg colors
@@ -91,6 +91,7 @@ $highlight: #1e9c74;
   display: flex;
   justify-content: center;
   z-index: 50;
+  pointer-events: none;
 }
 
 .layer.visible {
@@ -106,13 +107,12 @@ $highlight: #1e9c74;
   top: $cover_start;
   left: 0;
   right: 0;
-  z-index: 2;
-  transform: translateZ(-2px) scale(3);
+  z-index: 51;
+  background-color: $bg;
 }
 
 .background_layer {
   background-color: $bg;
-  transform: translateZ(-2px) scale(3);
   background: linear-gradient(0, #001927, #000000);
   height: 180vh;
   bottom: -50%;
@@ -127,23 +127,23 @@ $highlight: #1e9c74;
   transition: opacity 1s;
 }
 .layer_1 {
-  transform: translateZ(-4px) scale(5);
+  transform: translateZ(-1px) scale(2);
   transition: opacity 1.3s;
 }
 .layer_2 {
   transition: opacity 1s;
-  transform: translateZ(0px) scale(1);
+  transform: translateZ(-1px) scale(2);
 }
 .layer_3 {
-  transform: translateZ(-1px) scale(2);
+  transform: translateZ(0px) scale(1);
   transition: opacity 0.6s;
 }
 .layer_4 {
-  transform: translateZ(-2px) scale(3);
   transition: opacity 0.9s;
+  transform: translateZ(-2px) scale(3);
 }
 .layer_5 {
-  transform: translateZ(-3px) scale(4);
+  transform: translateZ(0px) scale(1);
   transition: opacity 0.2s;
 }
 .layer_6 {
@@ -155,11 +155,9 @@ $highlight: #1e9c74;
   transition: opacity 0.6s;
 }
 .text_layer {
-  transform: translateZ(-2px) scale(3);
   transition: opacity 0.9s;
   display: block;
 }
-
 
 .text_container {
   display: flex;
@@ -204,10 +202,11 @@ $highlight: #1e9c74;
   color: white;
 }
 .arrow {
-  transform: translateZ(-2px) scale(3);
   transition: opacity 0.9s;
-  top: 180%;
+  top: 90%;
   cursor: pointer;
+  z-index: 0;
+  pointer-events: all;
 }
 .intro {
   color: $top;
@@ -215,6 +214,7 @@ $highlight: #1e9c74;
   text-align: center;
   margin: 0% 25% 0% 25%;
   margin-bottom: 3rem;
+  margin-bottom: 100vh;
 }
 .intro a {
   color: $highlight;
@@ -234,6 +234,12 @@ $highlight: #1e9c74;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+.col-left {
+  text-align: left;
+}
+.col-right {
+  text-align: right;
+}
 @media only screen and (max-width: 768px) {
   .text_container {
     width: 100%;
@@ -243,8 +249,19 @@ $highlight: #1e9c74;
     height: 70%;
     font-size: 1.5rem;
   }
-  .arrow {
-    top: 135%;
+  .intro-sec {
+    font-size: 1.2rem;
+  }
+  .intro {
+    margin: 0% 5% 0% 5%;
+    margin-bottom: 50vh;
+  }
+  .intro-col {
+    font-size: 1rem;
+  }
+  .parallax_cover {
+    top: 160vh;
+    background: none;
   }
 }
 </style>
@@ -296,18 +313,18 @@ $highlight: #1e9c74;
       <p class="intro-sec"><span class="highlight">Alec Parkes</span> is a full stack Web Developer, Client Development Liason and tech enthusiast, currently based in Brisbane.</p>
       <div class="intro-sec">
         <div class="intro-col">
-          <p class="highlight">SDL Technology</p>
-          <p>Web Developer & Client Liason, 2020 - 2022</p>
+          <p class="highlight col-left">SDL Technology</p>
+          <p class="col-right">Web Developer & Client Liason, 2020 - 2022</p>
         </div>
         <div class="intro-col">
-          <p class="highlight">QUT</p>
-          <p>Bachelor of IT, Major in CompSci (6.6), 2022 </p>
+          <p class="highlight col-left">QUT</p>
+          <p class="col-right">Bachelor of IT, Major in CompSci (6.6), 2022 </p>
         </div>
       </div>
       <p class="intro-sec">My passion for technology and problem solving has led me to take on a wide variety of roles during my employment</p>
       <a href="/projects/workSDL">Read More</a>
     </section>
-    <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
+    <!-- <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
       <div class="info-card">
         <h2>Education</h2>
         <h3>Queensland University of Technology</h3>
@@ -337,7 +354,7 @@ $highlight: #1e9c74;
             Js, PHP, and SQL</li>
         </ul>
       </div>
-    </section>
+    </section> -->
     <section>
     </section>
     <Footer />
