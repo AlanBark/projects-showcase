@@ -54,7 +54,7 @@ onMount(() => {
 </script>
 <style lang="scss">
 
-$perspective: 1px;
+$perspective: 100px;
 // Height of parallax. This is smaller than the value due to the 3d effect.
 $cover_start: 230vh;
 
@@ -86,18 +86,18 @@ $highlight: #1e9c74;
   bottom: -0.5%;
   left: 0;
   width: 100vw;
-  visibility: hidden;
-  opacity: 0;
+  // visibility: hidden;
+  // opacity: 0;
   display: flex;
   justify-content: center;
   z-index: 50;
   pointer-events: none;
 }
 
-.layer.visible {
-  visibility: visible;
-  opacity: 1;
-}
+// .layer.visible {
+//   visibility: visible;
+//   opacity: 1;
+// }
 
 // Layer that comes 'after' the parallax. To prevent multiple scroll bars, this is actually still within the parallax element.
 // Bulk of page content goes here. Change 3d z and top to taste, for different points of where the cover crosses the parallax layers.
@@ -123,16 +123,16 @@ $highlight: #1e9c74;
 
 // Layer distance from 'camera'
 .layer_0 {
-  transform: translate3d(0px,0px,-2px) scale(3);
+  transform: translate3d(0px,0px,-200px) scale(3);
   transition: opacity 1s;
 }
 .layer_1 {
-  transform: translate3d(0px,0px,-1px) scale(2);
+  transform: translate3d(0px,0px,-100px) scale(2);
   transition: opacity 1.3s;
 }
 .layer_2 {
   transition: opacity 1s;
-  transform: translate3d(0px,0px,-1px) scale(2);
+  transform: translate3d(0px,0px,-100px) scale(2);
 }
 .layer_3 {
   transform: translate3d(0px,0px,0px) scale(1);
@@ -140,7 +140,7 @@ $highlight: #1e9c74;
 }
 .layer_4 {
   transition: opacity 0.9s;
-  transform: translate3d(0px,0px,-2px) scale(3);
+  transform: translate3d(0px,0px,-200px) scale(3);
 }
 .layer_5 {
   transform: translate3d(0px,0px,0px) scale(1);
@@ -151,7 +151,7 @@ $highlight: #1e9c74;
   transition: opacity 1s;
 }
 .layer_7 {
-  transform: translate3d(0px,0px,-1px) scale(2);
+  transform: translate3d(0px,0px,-100px) scale(2);
   transition: opacity 0.6s;
 }
 .text_layer {
