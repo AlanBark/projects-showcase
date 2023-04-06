@@ -86,18 +86,18 @@ $highlight: #1e9c74;
   bottom: -0.5%;
   left: 0;
   width: 100vw;
-  // visibility: hidden;
-  // opacity: 0;
+  visibility: hidden;
+  opacity: 0;
   display: flex;
   justify-content: center;
   z-index: 50;
   pointer-events: none;
 }
 
-// .layer.visible {
-//   visibility: visible;
-//   opacity: 1;
-// }
+.layer.visible {
+  visibility: visible;
+  opacity: 1;
+}
 
 // Layer that comes 'after' the parallax. To prevent multiple scroll bars, this is actually still within the parallax element.
 // Bulk of page content goes here. Change 3d z and top to taste, for different points of where the cover crosses the parallax layers.
@@ -260,8 +260,11 @@ $highlight: #1e9c74;
     font-size: 1rem;
   }
   .parallax_cover {
-    top: 160vh;
+    top: 100vh;
     background: none;
+  }
+  .layer {
+    transform: none;
   }
 }
 </style>
