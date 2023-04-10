@@ -13,6 +13,8 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
   }
   .info-card {
     background-color: none;
@@ -37,7 +39,6 @@
     text-align: center;
     margin: 0% 25% 0% 25%;
     margin-bottom: 3rem;
-    margin-bottom: 100vh;
   }
   .intro a {
     color: $highlight;
@@ -69,7 +70,7 @@
     }
     .intro {
       margin: 0% 5% 0% 5%;
-      margin-bottom: 50vh;
+      margin-bottom: 3rem;
     }
     .intro-col {
       font-size: 1rem;
@@ -100,7 +101,8 @@
     </p>
     <a href="/projects/workSDL">Read More</a>
   </section>
-  <!-- <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
+  <section class="personal" role="contentinfo" aria-label="Education, work and Personal achievements">
+      <p class="highlight">WIP</p>
       <div class="info-card">
         <h2>Education</h2>
         <h3>Queensland University of Technology</h3>
@@ -130,7 +132,7 @@
             Js, PHP, and SQL</li>
           </ul>
         </div>
-      </section> -->
+      </section>
   <section />
   <Footer />
 </Parallax>
