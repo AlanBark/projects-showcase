@@ -184,7 +184,8 @@
     top: 90%;
     cursor: pointer;
     pointer-events: all;
-    left: 50%;
+    display: flex;
+    justify-content: center;
   }
   @media only screen and (max-width: 768px) {
     .text_container {

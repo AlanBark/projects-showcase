@@ -1,6 +1,5 @@
 <style>
   .footer {
-    width: 100vw;
     background-color: rgb(15, 15, 15);
     text-align: center;
     color: #9aa3a5;
