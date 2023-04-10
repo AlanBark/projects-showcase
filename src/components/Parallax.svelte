@@ -196,11 +196,7 @@
       font-size: 1.5rem;
     }
     .parallax_cover {
-      top: 100vh;
-      background: none;
-    }
-    .layer {
-      transform: none;
+      padding-top: none;
     }
   }
 </style>
