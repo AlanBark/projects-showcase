@@ -16,6 +16,9 @@
   :global(html) {
     scroll-behavior: smooth;
   }
+  .bg {
+    overflow: hidden;
+  }
 </style>
 
 <div class="bg">
