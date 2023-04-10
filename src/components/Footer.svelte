@@ -10,6 +10,10 @@
     align-items: center;
     gap: 10px;
     padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 </style>
 <div class="footer">

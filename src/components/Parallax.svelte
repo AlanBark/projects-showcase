@@ -1,18 +1,11 @@
 <script lang="ts">
-
-  // import { onMount } from 'svelte';
-  import Footer from '../components/Footer.svelte';
+  import { onMount } from 'svelte';
   import HeaderDesktop from '../components/HeaderDesktop.svelte';
   
   let parallax: HTMLElement;
   // layers are hidden until the page scrolls, otherwise you get a 'snap'
-  let layerVisible: boolean = false;
-  // controls for recenter button visibility. Since both user scrolling and the recenter trigger the scroll event, this gets a little messy
-  // let setup = false;
-  // let recenterVisible = false;
-  // let recentering = false;
-  // let aligned = 0;
-  
+  // let layerVisible: boolean = false;
+
   // Smooth scroll within a div to a specific position
   function smoothScroll(y: number, element: HTMLElement) {
   
@@ -54,7 +47,7 @@
   
   $perspective: 100px;
   // Height of parallax. This is smaller than the value due to the 3d effect.
-  $cover_start: 150vh;
+  $cover_start: 100vh;
   
   $bg: #001927;
   // match 3d svg colors
@@ -107,16 +100,17 @@
     left: 0;
     right: 0;
     z-index: 1;
-    border-top: 2px 
+    min-height: 100vh;
   }
   
   .background_layer {
     background-color: $bg;
     background: linear-gradient(0, #001927, #000000);
-    height: $cover_start;
-    bottom: -50%;
     width: 100vw;
-    bottom: 0;
+  }
+
+  .invisible {
+    opacity: 0;
   }
   
   // Layer distance from 'camera'
@@ -197,14 +191,14 @@
       font-size: 1.5rem;
     }
     .parallax_cover {
-      padding-top: none;
+      padding-top: 0px;
     }
   }
 </style>
 
 <div class="parallax" bind:this={parallax}>
   <HeaderDesktop />
-  <div class="layer background_layer visible">
+  <div class="layer background_layer">
   </div>
   <div class="layer text_layer">
     <div class="text_container">
@@ -219,30 +213,14 @@
   <div class="layer arrow">
     <svg on:click={scrollToContent} on:keypress={scrollToContent} id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="21.3" height="34.3" viewBox="0 0 63.4 103"><defs><style>.cls-1{fill:none;stroke:#1e9c74;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><polyline class="cls-1" points="31.6 1.5 31.6 101.5 61.9 71.2"/><line class="cls-1" x1="31.6" y1="101.5" x2="1.5" y2="71.4"/></svg>
   </div>
-  <div class="layer layer_0">
-    <img class="name-img" src="/a1dark.svg" alt="left A" >
-  </div>
-  <div class="layer layer_1">
-    <img class="name-img" src="/a2dark.svg" alt="right A" >
-  </div>
-  <div class="layer layer_2">
-    <img class="name-img" src="/l1dark.svg" alt="left L" >
-  </div>
-  <div class="layer layer_3">
-    <img class="name-img" src="/l2dark.svg" alt="right L" >
-  </div>
-  <div class="layer layer_4">
-    <img class="name-img" src="/e1dark.svg" alt="Left E" >
-  </div> 
-  <div class="layer layer_5">
-    <img class="name-img" src="/e2dark.svg" alt="Right E" >
-  </div>
-  <div class="layer layer_7">
-    <img class="name-img" src="/c2dark.svg" alt="Left C" >
-  </div>
-  <div class="layer layer_6">
-    <img class="name-img" src="/c1dark.svg" alt="Right C">
-  </div>
+  <div class="layer layer_0"><img class="name-img" src="/a1dark.svg" alt="left A" ></div>
+  <div class="layer layer_1"><img class="name-img" src="/a2dark.svg" alt="right A" ></div>
+  <div class="layer layer_2"><img class="name-img" src="/l1dark.svg" alt="left L" ></div>
+  <div class="layer layer_3"><img class="name-img" src="/l2dark.svg" alt="right L" ></div>
+  <div class="layer layer_4"><img class="name-img" src="/e1dark.svg" alt="Left E" ></div> 
+  <div class="layer layer_5"><img class="name-img" src="/e2dark.svg" alt="Right E" ></div>
+  <div class="layer layer_7"><img class="name-img" src="/c2dark.svg" alt="Left C" ></div>
+  <div class="layer layer_6"><img class="name-img" src="/c1dark.svg" alt="Right C"></div>
   <div class="parallax_cover" id="content">
     <slot />
   </div>

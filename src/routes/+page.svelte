@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 150px;
     flex-wrap: wrap;
   }
   .info-card {
