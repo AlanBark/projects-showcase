@@ -94,7 +94,7 @@
   .parallax_cover{
     padding-top: 100px;
     margin-top: -10px;
-    background-color: $bg;
+    background-color: #00131e;
     display: block;
     position: absolute;
     top: $cover_start;
@@ -108,7 +108,7 @@
     background-color: $bg;
     background: linear-gradient(0, #001927, #000000);
     width: 100vw;
-    transform: translateZ(0px) scale(1);
+    transform: translateZ(-400px) scale(5);
   }
 
   .invisible {
