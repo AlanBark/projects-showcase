@@ -47,7 +47,7 @@
   
   $perspective: 100px;
   // Height of parallax. This is smaller than the value due to the 3d effect.
-  $cover_start: 140vh;
+  $cover_start: 100vh;
   
   $bg: #001927;
   // match 3d svg colors
