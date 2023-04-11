@@ -35,13 +35,6 @@
     smoothScroll(innerHeight * 1.6, parallax);
   }
   
-  // onMount(() => {
-  //   // Starting further down the page gives the effect of layers 'falling' down as you scroll up.
-  //   parallax.scrollTo(0, 1000);
-  //   smoothScroll(0, parallax);
-  //   layerVisible = true;
-  // });
-  
   </script>
   <style lang="scss">
   
@@ -129,10 +122,10 @@
   }
   .layer_l1 {
     transition: opacity 1s;
-    transform: translate3d(0px,0px, -25px) scale(1.25);
+    transform: translate3d(0px,0px, -100px) scale(2);
   }
   .layer_l2 {
-    transform: translate3d(0px,0px, -100px) scale(2);
+    transform: translate3d(0px,0px, -25px) scale(1.25);
     transition: opacity 0.6s;
   }
   .layer_e1 {
@@ -190,6 +183,9 @@
     .text_container {
       width: 100%;
       height: 75%;
+    }
+    .arrow {
+      top: 77%;
     }
     .text_right {
       height: 70%;
