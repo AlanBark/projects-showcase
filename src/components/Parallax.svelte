@@ -114,36 +114,36 @@
   }
   
   // Layer distance from 'camera'
-  .layer_0 {
-    transform: translate3d(0px,0px,-200px) scale(3);
+  .layer_a1 {
+    transform: translate3d(0px,0px,-350px) scale(4.5);
     transition: opacity 1s;
   }
-  .layer_1 {
-    transform: translate3d(0px,0px,-100px) scale(2);
+  .layer_a2 {
+    transform: translate3d(0px,0px,-300px) scale(4);
     transition: opacity 1.3s;
   }
-  .layer_2 {
+  .layer_l1 {
     transition: opacity 1s;
-    transform: translate3d(0px,0px,-100px) scale(2);
+    transform: translate3d(0px,0px,-250px) scale(3.5);
   }
-  .layer_3 {
-    transform: translate3d(0px,0px,0px) scale(1);
+  .layer_l2 {
+    transform: translate3d(0px,0px, -200px) scale(3);
     transition: opacity 0.6s;
   }
-  .layer_4 {
+  .layer_e1 {
     transition: opacity 0.9s;
-    transform: translate3d(0px,0px,-200px) scale(3);
+    transform: translate3d(0px,0px,-150px) scale(2.5);
   }
-  .layer_5 {
-    transform: translate3d(0px,0px,0px) scale(1);
+  .layer_e2 {
+    transform: translate3d(0px,0px, -100px) scale(2);
     transition: opacity 0.2s;
   }
-  .layer_6 {
-    transform: translate3d(0px,0px,0px) scale(1);
+  .layer_c2 {
+    transform: translate3d(0px,0px, -50px) scale(1.5);
     transition: opacity 1s;
   }
-  .layer_7 {
-    transform: translate3d(0px,0px,-100px) scale(2);
+  .layer_c1 {
+    transform: translate3d(0px,0px, 0px) scale(1);
     transition: opacity 0.6s;
   }
   .text_layer {
@@ -213,14 +213,14 @@
   <div class="layer arrow">
     <svg on:click={scrollToContent} on:keypress={scrollToContent} id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="21.3" height="34.3" viewBox="0 0 63.4 103"><defs><style>.cls-1{fill:none;stroke:#1e9c74;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><polyline class="cls-1" points="31.6 1.5 31.6 101.5 61.9 71.2"/><line class="cls-1" x1="31.6" y1="101.5" x2="1.5" y2="71.4"/></svg>
   </div>
-  <div class="layer layer_0"><img class="name-img" src="/a1dark.png" alt="left A" ></div>
-  <div class="layer layer_1"><img class="name-img" src="/a2dark.png" alt="right A" ></div>
-  <div class="layer layer_2"><img class="name-img" src="/l1dark.png" alt="left L" ></div>
-  <div class="layer layer_3"><img class="name-img" src="/l2dark.png" alt="right L" ></div>
-  <div class="layer layer_4"><img class="name-img" src="/e1dark.png" alt="Left E" ></div> 
-  <div class="layer layer_5"><img class="name-img" src="/e2dark.png" alt="Right E" ></div>
-  <div class="layer layer_7"><img class="name-img" src="/c2dark.png" alt="Left C" ></div>
-  <div class="layer layer_6"><img class="name-img" src="/c1dark.png" alt="Right C"></div>
+  <div class="layer layer_a1"><img class="name-img" src="/a1dark.png" alt="left A" ></div>
+  <div class="layer layer_a2"><img class="name-img" src="/a2dark.png" alt="right A" ></div>
+  <div class="layer layer_l1"><img class="name-img" src="/l1dark.png" alt="left L" ></div>
+  <div class="layer layer_l2"><img class="name-img" src="/l2dark.png" alt="right L" ></div>
+  <div class="layer layer_e1"><img class="name-img" src="/e1dark.png" alt="Left E" ></div> 
+  <div class="layer layer_e2"><img class="name-img" src="/e2dark.png" alt="Right E" ></div>
+  <div class="layer layer_c2"><img class="name-img" src="/c2dark.png" alt="Left C" ></div>
+  <div class="layer layer_c1"><img class="name-img" src="/c1dark.png" alt="Right C"></div>
   <div class="parallax_cover" id="content">
     <slot />
   </div>
