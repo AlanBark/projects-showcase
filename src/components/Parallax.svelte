@@ -67,7 +67,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-overflow-scrolling: auto;
+    transform: translateZ(0);
   }
   
   .layer {
@@ -104,11 +104,11 @@
     min-height: 100vh;
   }
   
-  .background_layer {
-    background-color: $bg;
-    background: linear-gradient(0, #001927, #000000);
-    width: 100vw;
-  }
+  // .background_layer {
+  //   background-color: $bg;
+  //   background: linear-gradient(0, #001927, #000000);
+  //   width: 100vw;
+  // }
 
   .invisible {
     opacity: 0;
