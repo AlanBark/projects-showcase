@@ -1,6 +1,6 @@
 <style>
   .footer {
-    background-color: rgb(15, 15, 15);
+    background-color: #000000;
     text-align: center;
     color: #9aa3a5;
     font-size: 0.8rem;

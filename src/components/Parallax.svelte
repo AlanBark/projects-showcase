@@ -47,7 +47,7 @@
   
   $perspective: 100px;
   // Height of parallax. This is smaller than the value due to the 3d effect.
-  $cover_start: 100vh;
+  $cover_start: 140vh;
   
   $bg: #001927;
   // match 3d svg colors
@@ -94,7 +94,9 @@
   .parallax_cover{
     padding-top: 100px;
     margin-top: -10px;
-    background-color: #00131e;
+    // background-color: #00131e;
+    background-color: #000000;
+    border-radius: 20px 20px 0 0;
     display: block;
     position: absolute;
     top: $cover_start;
@@ -109,6 +111,7 @@
     background: linear-gradient(0, #001927, #000000);
     width: 100vw;
     transform: translateZ(-400px) scale(5);
+    height: $cover_start;
   }
 
   .invisible {
@@ -117,31 +120,31 @@
   
   // Layer distance from 'camera'
   .layer_a1 {
-    transform: translate3d(0px,0px,-350px) scale(4.5);
+    transform: translate3d(0px,0px,-200px) scale(3);
     transition: opacity 1s;
   }
   .layer_a2 {
-    transform: translate3d(0px,0px,-300px) scale(4);
+    transform: translate3d(0px,0px,-350px) scale(4.5);
     transition: opacity 1.3s;
   }
   .layer_l1 {
     transition: opacity 1s;
-    transform: translate3d(0px,0px,-250px) scale(3.5);
+    transform: translate3d(0px,0px, -25px) scale(1.25);
   }
   .layer_l2 {
-    transform: translate3d(0px,0px, -200px) scale(3);
+    transform: translate3d(0px,0px, -100px) scale(2);
     transition: opacity 0.6s;
   }
   .layer_e1 {
     transition: opacity 0.9s;
-    transform: translate3d(0px,0px,-150px) scale(2.5);
+    transform: translate3d(0px,0px, -200px) scale(3);
   }
   .layer_e2 {
-    transform: translate3d(0px,0px, -100px) scale(2);
+    transform: translate3d(0px,0px, -50px) scale(1.5);
     transition: opacity 0.2s;
   }
   .layer_c2 {
-    transform: translate3d(0px,0px, -50px) scale(1.5);
+    transform: translate3d(0px,0px, -100px) scale(2);
     transition: opacity 1s;
   }
   .layer_c1 {
