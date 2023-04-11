@@ -104,11 +104,12 @@
     min-height: 100vh;
   }
   
-  // .background_layer {
-  //   background-color: $bg;
-  //   background: linear-gradient(0, #001927, #000000);
-  //   width: 100vw;
-  // }
+  .background_layer {
+    background-color: $bg;
+    background: linear-gradient(0, #001927, #000000);
+    width: 100vw;
+    transform: translateZ(0px) scale(1);
+  }
 
   .invisible {
     opacity: 0;
