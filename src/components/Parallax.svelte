@@ -32,7 +32,7 @@
   
   function scrollToContent() {
     // Scroll to the top of the content
-    smoothScroll(innerHeight * 1.6, parallax);
+    smoothScroll(innerHeight, parallax);
   }
   
   </script>
@@ -214,14 +214,14 @@
   <div class="layer arrow">
     <svg on:click={scrollToContent} on:keypress={scrollToContent} id="Layer_2" xmlns="http://www.w3.org/2000/svg" width="21.3" height="34.3" viewBox="0 0 63.4 103"><defs><style>.cls-1{fill:none;stroke:#1e9c74;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><polyline class="cls-1" points="31.6 1.5 31.6 101.5 61.9 71.2"/><line class="cls-1" x1="31.6" y1="101.5" x2="1.5" y2="71.4"/></svg>
   </div>
-  <div class="layer layer_a1"><img class="name-img" src="/a1dark.png" alt="left A" ></div>
-  <div class="layer layer_a2"><img class="name-img" src="/a2dark.png" alt="right A" ></div>
-  <div class="layer layer_l1"><img class="name-img" src="/l1dark.png" alt="left L" ></div>
-  <div class="layer layer_l2"><img class="name-img" src="/l2dark.png" alt="right L" ></div>
-  <div class="layer layer_e1"><img class="name-img" src="/e1dark.png" alt="Left E" ></div> 
-  <div class="layer layer_e2"><img class="name-img" src="/e2dark.png" alt="Right E" ></div>
-  <div class="layer layer_c2"><img class="name-img" src="/c2dark.png" alt="Left C" ></div>
-  <div class="layer layer_c1"><img class="name-img" src="/c1dark.png" alt="Right C"></div>
+  <div class="layer layer_a1"><img class="name-img" src="/a1dark.svg" alt="left A" ></div>
+  <div class="layer layer_a2"><img class="name-img" src="/a2dark.svg" alt="right A" ></div>
+  <div class="layer layer_l1"><img class="name-img" src="/l1dark.svg" alt="left L" ></div>
+  <div class="layer layer_l2"><img class="name-img" src="/l2dark.svg" alt="right L" ></div>
+  <div class="layer layer_e1"><img class="name-img" src="/e1dark.svg" alt="Left E" ></div> 
+  <div class="layer layer_e2"><img class="name-img" src="/e2dark.svg" alt="Right E" ></div>
+  <div class="layer layer_c2"><img class="name-img" src="/c2dark.svg" alt="Left C" ></div>
+  <div class="layer layer_c1"><img class="name-img" src="/c1dark.svg" alt="Right C"></div>
   <div class="parallax_cover" id="content">
     <slot />
   </div>
