@@ -82,6 +82,9 @@
   }
 </style>
 
+<svelte:head>
+    <title>Alec Parkes</title> 
+</svelte:head>
 <Parallax>
   <section class="intro" role="contentinfo" aria-label="Intro about me">
     <div class="intro-sec">

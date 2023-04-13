@@ -18,6 +18,9 @@
   }
 </style>
 
+<svelte:head>
+    <title>Alec Parkes | Projects</title> 
+</svelte:head>
 <div class="page">
   <HeaderDesktop />
   {#each Object.entries(data.projects) as [category, projects]}

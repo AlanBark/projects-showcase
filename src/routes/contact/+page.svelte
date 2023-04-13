@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Footer from '../../components/Footer.svelte';
+import Footer from '../../components/Footer.svelte';
 import HeaderDesktop from '../../components/HeaderDesktop.svelte';
 </script>
 
@@ -74,6 +74,9 @@ import HeaderDesktop from '../../components/HeaderDesktop.svelte';
   }
 </style>
 
+<svelte:head>
+    <title>Alec Parkes | Contact</title> 
+</svelte:head>
 <div class="page">
   <HeaderDesktop />
   <div class="contact-wrap">
