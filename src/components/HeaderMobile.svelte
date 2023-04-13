@@ -22,9 +22,12 @@
     margin-top: 2rem;
     background-color: $highlight;
     right: auto;
+    z-index: 101;
   }
   .nav-icon {
     cursor: pointer;
+    padding: 0.5em;
+    margin: -0.5em;
   }
   .sidebar-mobile {
     width: 0%;

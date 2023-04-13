@@ -82,13 +82,17 @@
   }
 </style>
 
-<!-- You could definitely make a component per layer, but the boilerplate looks uglier than this -->
 <Parallax>
   <section class="intro" role="contentinfo" aria-label="Intro about me">
-    <p class="intro-sec">
-      <span class="highlight">Alec Parkes</span> is a full stack Web Developer, Client
-      Development Liason and tech enthusiast, currently based in Brisbane.
-    </p>
+    <div class="intro-sec">
+      <div class="intro-col">
+        <p class="col-left"><span class="highlight">Alec Parkes</span> is a Full Stack Web Developer, Client
+          Development Liason and tech enthusiast, currently based in Brisbane.</p>
+        <div class="col-right">
+
+        </div>
+      </div>
+    </div>
     <div class="intro-sec">
       <div class="intro-col">
         <p class="highlight col-left">SDL Technology</p>

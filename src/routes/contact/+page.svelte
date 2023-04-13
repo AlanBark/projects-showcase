@@ -1,50 +1,99 @@
+<script lang="ts">
+  import Footer from '../../components/Footer.svelte';
+import HeaderDesktop from '../../components/HeaderDesktop.svelte';
+</script>
+
 <style lang="scss">
-
-.face {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 1px solid #000;
-  box-sizing: border-box;
-}
-
-.cube {
-  transform-style: preserve-3d;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-}
-
-.wrap {
-  height: 100vh;
-  width: 100%;
-  perspective: 600px;
-  margin-top: 100px;
-}
-
-.front {
-  background: #f00;
-}
-
-.top {
-  background: #0f0;
-  transform: rotateX(90deg) translateZ(50px);
-}
-
-.left {
-  background: #00f;
-  transform: rotateY(-90deg) translateZ(50px);
-}
-
-
+  $bg: #000102;
+  $top: #9aa3a5;
+  $highlight: #1e9c74;
+  .page {
+    background-color: $bg;
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  .contact {
+    display: grid;
+    gap: 3rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    @media only screen and (min-width: 768px) {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      margin-right: 6rem;
+      margin-left: 6rem;
+    }
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: $top;
+    justify-content: center;
+  }
+  .highlight {
+    color: white;
+  }
+  .contact-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  .contact-links a {
+    color: $highlight;
+  }
+  .photo {
+    display: flex;
+    justify-content: center;
+    @media only screen and (min-width: 768px) {
+      justify-content: right;
+    }
+  }
+  .photo img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    @media only screen and (max-width: 768px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
 </style>
 
-<div class="wrap">
-  <div class="cube">
-    <div class="face front"></div>
-    <div class="face top"></div>
-    <div class="face left"></div>
+<div class="page">
+  <HeaderDesktop />
+  <div class="contact-wrap">
+    <div class="contact">
+      <div class="photo">
+        <img src="/envelope.jpg" alt="me" />
+      </div>
+      <div class="contact-info">
+        <h1 class="highlight">Get in touch</h1>
+        <p>I'm currently looking for a new opportunity. </p>
+        <p>My inbox is always open.
+          Whether you have a question or just want to say hi, I'll try my best to
+          get back to you!
+        </p>
+        <div class="contact-links">
+          <a href="mailto:alec@parkes.dev">Email</a>
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alec-parkes-1754a817a/">LinkedIn</a>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- <Footer /> -->
 </div>

@@ -15,10 +15,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     color: $highlight;
   }
   .nav {
@@ -33,7 +30,7 @@
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
   }
-  .is-active {
+  .nav a.is-active {
     color: rgb(12, 124, 119);
   }
   .nav a:hover {
