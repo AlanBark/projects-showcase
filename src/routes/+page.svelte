@@ -1,5 +1,4 @@
 <script lang="ts">
-  // import { onMount } from 'svelte';
   import Footer from "../components/Footer.svelte";
   import Parallax from "../components/Parallax.svelte";
 </script>
@@ -8,9 +7,6 @@
 <style lang="scss">
   $top: #9aa3a5;
   $highlight: #1e9c74;
-  html, body {
-    overflow: hidden;
-  }
   
   .personal {
     display: flex;

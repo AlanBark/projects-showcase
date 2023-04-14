@@ -1,10 +1,7 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import HeaderDesktop from '../components/HeaderDesktop.svelte';
   
   let parallax: HTMLElement;
-  // layers are hidden until the page scrolls, otherwise you get a 'snap'
-  // let layerVisible: boolean = false;
 
   // Smooth scroll within a div to a specific position
   function smoothScroll(y: number, element: HTMLElement) {
@@ -198,7 +195,7 @@
 </style>
 
 <div class="parallax" bind:this={parallax}>
-  <HeaderDesktop />
+  <HeaderDesktop background={false}/>
   <div class="layer background_layer">
   </div>
   <div class="layer text_layer">

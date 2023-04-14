@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import Slider from '../../components/Slider.svelte';
-    import HeaderDesktop from '../../components/HeaderDesktop.svelte';
+  import HeaderDesktop from '../../components/HeaderDesktop.svelte';
 
   export let data: PageData;
 </script>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
+  export let background: boolean = true;
 </script>
 
 <style lang="scss">
@@ -71,9 +72,12 @@
       display: block;
     }
   }
+  .background {
+    background-color: #000000;
+  }
 </style>
 
-<div class="header-desktop">
+<div class="header-desktop" class:background={background}>
   <a class="outline" href="/contact">
     <p>Alec Parkes</p>
     <!-- Redirect svg -->

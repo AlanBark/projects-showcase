@@ -21,7 +21,9 @@
   }
 </style>
 
-
+<svelte:head>
+  <link rel="icon" type="image/svg" href={"/favicon.svg"} />
+</svelte:head>
 <!-- Header Desktop has to be inside the slot, and bg has to be mostly unstyled to play nice with parallax effects. Unfortunately means cant use layouts for it -->
 <div class="bg">
   <HeaderMobile />

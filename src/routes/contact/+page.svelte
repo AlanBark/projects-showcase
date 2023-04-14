@@ -98,5 +98,5 @@ import HeaderDesktop from '../../components/HeaderDesktop.svelte';
       </div>
     </div>
   </div>
-  <!-- <Footer /> -->
+  <Footer />
 </div>
