@@ -2,12 +2,14 @@
   import HeaderDesktop from '../../../components/HeaderDesktop.svelte';
   import type { PageData } from './$types';
   import '$lib/styles/prismjs.css';
-    import Footer from '../../../components/Footer.svelte';
+  import Footer from '../../../components/Footer.svelte';
   export let data: PageData;
 </script>
 <style lang="scss">
   $bg: #000000;
   $top: #9aa3a5;
+  $highlight: #1e9c74;
+
   .page {
     background-color: $bg;
     color: white;
@@ -35,13 +37,11 @@
     color: $top;
     margin-bottom: 1.5rem;
   }
-  .content {
-    border-radius: 6px;
-    padding: 1.5rem;
-    background-color: #121414;
-  }
   .content :global(p) {
     margin: 0.75rem 0;
+  }
+  .content :global(a) {
+    color: $highlight;
   }
 </style>
 
@@ -54,5 +54,5 @@
       <svelte:component this={data.content} />
     </div>
   </article>
-  <Footer />
 </div>
+<Footer />

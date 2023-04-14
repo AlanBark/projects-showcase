@@ -163,7 +163,7 @@
     width: 95%;
     height: 90%;
     align-items: end;
-    font-size: 2rem;
+    font-size: 1.36rem;
   }
   .highlight {
     color: white;
@@ -185,8 +185,8 @@
       top: 77%;
     }
     .text_right {
-      height: 70%;
-      font-size: 1.5rem;
+      height: 72%;
+      font-size: 1rem;
     }
     .parallax_cover {
       padding-top: 0px;
