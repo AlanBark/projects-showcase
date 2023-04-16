@@ -32,10 +32,10 @@
     transition: all 0.2s ease-in-out;
   }
   .nav a.is-active {
-    color: rgb(12, 124, 119);
+    color: $highlight;
   }
   .nav a:hover {
-    color: rgb(14, 156, 149);
+    color: $highlight;
   }
   .git {
     width: 2.5rem;
@@ -47,8 +47,12 @@
   .outline {
     font-size: 1rem;
     font-weight: 500;
-    color: $highlight;
+    color: #ffffff;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  .outline:hover {
+    color: $highlight;
   }
   @media only screen and (max-width: 768px) {
     .nav {

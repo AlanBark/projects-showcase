@@ -1,7 +1,7 @@
 ---
 title: Example
 date: "24 Mar 2023"
-category: "Work"
+category: "Other"
 ---
 
 # h1 Heading
