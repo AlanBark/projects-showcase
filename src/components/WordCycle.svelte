@@ -4,7 +4,7 @@
 </script>
 
 <style lang="scss">
-  
+  $top: #9aa3a5;
   .cycle {
     display: grid;
     gap: 1rem;

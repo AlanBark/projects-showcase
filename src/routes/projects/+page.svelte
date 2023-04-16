@@ -2,12 +2,11 @@
   import type { PageData } from './$types';
   import HeaderDesktop from '../../components/HeaderDesktop.svelte';
   import PostSlider from '../../components/PostSlider.svelte';
-    import WordCycle from '../../components/WordCycle.svelte';
-
+  import WordCycle from '../../components/WordCycle.svelte';
+  import type { IProject } from '$lib/typedef/IProject';
   export let data: PageData;
 
-  console.log(Object.entries(data.projects).length);
-
+  let activeCategory = 'All';
 </script>
 
 <style lang="scss">
@@ -44,11 +43,6 @@
     flex-direction: column;
     border-radius: 0 0 15px 15px;
   }
-  .hero p {
-    color: $top;
-    margin-top: 0rem;
-    margin-bottom: 3rem;
-  }
   @media screen and (max-width: 768px) {
     .hero {
       display: none;
@@ -66,6 +60,9 @@
     <WordCycle words={["Passionate", "Personal", "Professional"]} sentence="Projects"/>
   </div>
   <div class="content">
-    <PostSlider projects={data.projects} />
+    <PostSlider projects={data.projects} bind:active={activeCategory} />
+    <div class="projectList">
+      
+    </div>
   </div>
 </div>

@@ -27,7 +27,7 @@
   }
   .nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(165, 165, 165);
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
   }
@@ -47,7 +47,7 @@
   .outline {
     font-size: 1rem;
     font-weight: 500;
-    color: #ffffff;
+    color: rgb(165, 165, 165);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
   }

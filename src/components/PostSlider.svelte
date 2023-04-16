@@ -26,7 +26,7 @@
     color: white;
     border-bottom: 2px solid white;
   }
-  .active {
+  .active, .active:hover {
     color: white;
     border-bottom: 2px solid $highlight;
   }
