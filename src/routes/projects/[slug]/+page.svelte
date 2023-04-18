@@ -44,6 +44,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>{data.title} | Alec Parkes</title>
+  <meta property="og:title" content={data.title} />
+</svelte:head>
 <HeaderDesktop />
 <div class="page">
   <article class="blog">
