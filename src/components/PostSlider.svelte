@@ -1,6 +1,5 @@
 <script lang="ts">
-  import type { IProject } from "$lib/typedef/IProject";
-  export let projects: { [key: string]: IProject[]; }
+  export let categories: string[];
   export let active: string = "All";
 </script>
 
@@ -34,7 +33,7 @@
 
 <div class="PostSlider">
   <p on:keydown on:click={() => active = 'All'} class:active="{active === 'All'}">All</p>
-  {#each Object.entries(projects) as [key, value]}
-    <p on:keydown on:click={() => active = key} class:active="{active === key}">{key}</p>
+  {#each categories as category}
+    <p on:keydown on:click={() => active = category} class:active="{active === category}">{category}</p>
   {/each}
 </div>

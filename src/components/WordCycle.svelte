@@ -55,6 +55,7 @@
     animation-delay: 4s;
   }
   .cycle__items h1:nth-child(2) {
+    opacity: 1;
     animation-delay: 0s;
   }
   .cycle__items h1:nth-child(3) {
