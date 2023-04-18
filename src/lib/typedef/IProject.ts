@@ -1,7 +1,8 @@
 export interface IProject {
   title: string;
   date: string;
-  category: string;
+  category: string[];
   path: string;
   thumbnail: string;
+  description: string;
 }
