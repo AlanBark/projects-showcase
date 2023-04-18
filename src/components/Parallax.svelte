@@ -156,7 +156,7 @@
     font-weight: 900;
     letter-spacing: 0.1rem;
     text-align: center;
-    color: $highlight;
+    color: $top;
   }
   .text_right {
     justify-content: flex-end;
@@ -166,7 +166,7 @@
     font-size: 1.36rem;
   }
   .highlight {
-    color: white;
+    color: $highlight;
   }
   .arrow {
     transition: opacity 0.9s;
