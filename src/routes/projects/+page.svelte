@@ -78,5 +78,5 @@ $top: #9aa3a5;
     {/each}
   </div>
 </div>
-<Footer />
 </div>
+<Footer />

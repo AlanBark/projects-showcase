@@ -1,7 +1,8 @@
 ---
 title: Example
 date: "24 Mar 2023"
-category: "Other"
+category: [ "other" ]
+thumbnail: "/envelope.jpg"
 ---
 
 # h1 Heading
