@@ -16,6 +16,7 @@ import HeaderDesktop from '../../components/HeaderDesktop.svelte';
     margin: 0;
     display: flex;
     flex-direction: column;
+    padding-bottom: 6rem;
   }
   .contact-wrap {
     display: flex;
@@ -99,5 +100,5 @@ import HeaderDesktop from '../../components/HeaderDesktop.svelte';
       </div>
     </div>
   </div>
-  <Footer />
 </div>
+<Footer />

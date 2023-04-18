@@ -15,17 +15,16 @@
     color: white;
     min-height: 100vh;
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 3rem 20% 6rem 20%;
+    @media screen and (max-width: 768px) {
+      padding: 3rem 5% 6rem 20%;
+    }
   }
   .blog {
-    margin: 3rem 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media screen and (max-width: 768px) {
-      margin: 3rem 5%;
-    }
   }
   .title {
     font-size: 3rem;
@@ -45,8 +44,8 @@
   }
 </style>
 
+<HeaderDesktop />
 <div class="page">
-  <HeaderDesktop />
   <article class="blog">
     <p class="title">{data.title}</p>
     <p class="date">{data.date}</p>

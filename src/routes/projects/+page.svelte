@@ -22,6 +22,7 @@ $top: #9aa3a5;
   color: white;
   min-height: 100vh;
   width: 100%;
+  padding-bottom: 6rem;
 }
 .content {
   margin: 0 20%;
