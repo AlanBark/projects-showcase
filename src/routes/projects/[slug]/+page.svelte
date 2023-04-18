@@ -46,7 +46,23 @@
 
 <svelte:head>
   <title>{data.title} | Alec Parkes</title>
-  <meta property="og:title" content={data.title} />
+  <!-- HTML Meta Tags -->
+  <meta name="description" content="{data.description}">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://www.alec.parkes.dev/projects/example">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{data.title}">
+  <meta property="og:description" content="{data.description}">
+  <meta property="og:image" content="{data.thumbnail}">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="alec.parkes.dev">
+  <meta property="twitter:url" content="https://www.alec.parkes.dev/projects/example">
+  <meta name="twitter:title" content="{data.title}">
+  <meta name="twitter:description" content="{data.description}">
+  <meta name="twitter:image" content="{data.thumbnail}">
 </svelte:head>
 <HeaderDesktop />
 <div class="page">
