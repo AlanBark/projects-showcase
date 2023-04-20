@@ -188,9 +188,6 @@
       height: 72%;
       font-size: 1rem;
     }
-    .parallax_cover {
-      padding-top: 0px;
-    }
   }
 </style>
 

@@ -88,9 +88,7 @@ import HeaderDesktop from '../../components/HeaderDesktop.svelte';
       <div class="contact-info">
         <h1 class="highlight">Get in touch</h1>
         <p>I'm currently looking for a new opportunity. </p>
-        <p>My inbox is always open.
-          Whether you have a question or just want to say hi, I'll try my best to
-          get back to you!
+        <p>My inbox is always open. 
         </p>
         <div class="contact-links">
           <a href="mailto:alec.parkes.f@gmail.com">Email</a>

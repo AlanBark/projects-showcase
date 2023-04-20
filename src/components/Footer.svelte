@@ -1,3 +1,6 @@
+<script lang="ts">
+  export let inContainer: boolean = false;  
+</script>
 <style>
   .footer {
     background-color: #000000;
@@ -5,7 +8,6 @@
     font-size: 0.8rem;
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    gap: 10px;
     padding-bottom: 1rem;
     position: relative;
     bottom: 0;
@@ -53,6 +55,7 @@
     flex-direction: column;
     font-style: italic;
 }
+
 </style>
 
 <div class="footer">

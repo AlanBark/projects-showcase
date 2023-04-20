@@ -3,6 +3,7 @@ title: Example
 date: "24 Mar 2023"
 category: [ "other" ]
 thumbnail: "/envelope.jpg"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 ---
 
 # h1 Heading
