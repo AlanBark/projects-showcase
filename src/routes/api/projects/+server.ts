@@ -6,12 +6,16 @@ export const GET = async () => {
   
     let categories: string[] = [];
   
-    projects.forEach((project) => {
-      project.category.forEach((category) => {
-        if (!categories.includes(category)) {
-          categories.push(category);
-        }
+    try {
+      projects.forEach((project) => {
+        project.category.forEach((category) => {
+          if (!categories.includes(category)) {
+            categories.push(category);
+          }
+        });
       });
-    });
+    } catch {
+      return json({ projects: [], categories: [] });
+    }
   return json({projects: projects, categories: categories});
 };
