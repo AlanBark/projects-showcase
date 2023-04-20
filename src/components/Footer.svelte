@@ -1,6 +1,3 @@
-<script lang="ts">
-  export let inContainer: boolean = false;  
-</script>
 <style>
   .footer {
     background-color: #000000;
@@ -70,7 +67,7 @@
   <div class="links">
     <h2>Contact</h2>
     <ul>
-      <li><a href="mailto:alec.parkes.f@gmail.com">Email</a></li>
+      <li><a href="mailto:alec@parkes.dev">Email</a></li>
       <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alec-parkes-1754a817a/">LinkedIn</a></li>
       <li><a target="_blank" rel="noreferrer" href="https://github.com/AlanBark">GitHub</a></li>
     </ul>

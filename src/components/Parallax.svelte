@@ -103,10 +103,6 @@
     transform: translateZ(-400px) scale(5);
     height: $cover_start;
   }
-
-  .invisible {
-    opacity: 0;
-  }
   
   // Layer distance from 'camera'
   .layer_a1 {

@@ -10,17 +10,6 @@
   $top: #9aa3a5;
   $highlight: #1e9c74;
 
-  .personal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 150px;
-    flex-wrap: wrap;
-  }
-  .highlight {
-    color: white;
-  }
   .intro {
     display: flex;
     flex-direction: column;

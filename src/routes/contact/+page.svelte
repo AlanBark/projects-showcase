@@ -91,7 +91,7 @@ import HeaderDesktop from '../../components/HeaderDesktop.svelte';
         <p>My inbox is always open. 
         </p>
         <div class="contact-links">
-          <a href="mailto:alec.parkes.f@gmail.com">Email</a>
+          <a href="mailto:alec@parkes.dev">Email</a>
           <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alec-parkes-1754a817a/">LinkedIn</a>
           <a target="_blank" rel="noreferrer" href="https://github.com/AlanBark">GitHub</a>
         </div>
