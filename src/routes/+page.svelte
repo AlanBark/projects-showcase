@@ -91,7 +91,7 @@
         <InfoCard title="Education"  text="Bachelor of IT in Computer Science - 6.6 GPA - QUT Dec 2022" link="/projects/education">
           <SchoolOutline size="40" />
         </InfoCard>
-        <InfoCard title="Mobile, Desktop & More"  text="From JS to C, AWS to single gate chips. If it runs code, I'm interested." link="/softwareDevelopment">
+        <InfoCard title="Mobile, Desktop & More"  text="From JS to C, AWS to single gate chips. If it runs code, I'm interested." link="/projects/softwareDevelopment">
           <DesktopOutline size="40" />
         </InfoCard>
       </div>
