@@ -76,7 +76,7 @@
   <h2 class="card-title">{title}</h2>
   <p class="card-text">{text}</p>
   <div class="card-link">
-    <a href="/">Read more</a>
+    <a href={link}>Read more</a>
       <ArrowForwardOutline size="20"/>
   </div>
 </a>
