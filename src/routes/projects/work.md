@@ -6,9 +6,9 @@ thumbnail: "/sdl-min.png"
 description: "A collection of experiences and projects from my time at SDL Technology"
 ---
 
-# SDL Technology
+# [SDL Technology](https://sdltechnology.com.au/)
 
-I started my employment at SDL Technology in Janurary of 2021. I was hired as a Web Developer, but quickly branched out to take on a number of roles, including client communications, graphic design and handling deployments. 
+I started my employment at SDL Technology in Janurary of 2021. I was hired as a Web Developer, but quickly branched out to take on a number of roles, including client communications, graphic design and handling deployments.
 
 I have worked on a number of projects for SDL, including:
 
@@ -21,7 +21,7 @@ PocoPosy is one of the largest commercial florists in the greater Brisbane area.
 This project was written in PHP with Laravel, with components being written in Vue.js. 
 
 
-#### If you'd like, you can read more about my involvement in this project [here](/projects/pocoposy).
+<!-- #### If you'd like, you can read more about my involvement in this project [here](/projects/pocoposy). -->
 
 ## [Queensland Academy of Technology Website and Education Portal](https://qat.qld.edu.au/)
 
@@ -47,3 +47,13 @@ A large part of my role at SDL was to develop internal tools to assist with the 
  - PHP Library built on Laravel to assist with the creation of new websites, including features such as content management, handling file uploads, contact forms and general PHP improvements
  - Ticketing system and payment portal for all clients of SDL
  - Internal CRM & ERP system for managing clients, projects and billing
+
+## Client Communications
+
+Another aspect of my job was to meet with current and potential clients to assess what needs they had. 
+
+I was responsible for scheduling meetings on site and online meetings, taking points from these meetings and transforming them into actionable, billable tasks.
+
+## End of employment
+
+In the second half of 2022, I left SDL Technology to focus on the final stretch of my studies. Working there was a great time, and being put into a position to take on so many different roles was a great learning experience.

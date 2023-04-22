@@ -6,4 +6,6 @@ thumbnail: "/books.jpg"
 description: "My journey through tertiary and secondary education."
 ---
 
-# Education
+# Education and Achievements
+
+
