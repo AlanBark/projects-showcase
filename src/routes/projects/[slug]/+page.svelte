@@ -18,7 +18,7 @@
     margin: 0;
     padding: 3rem 20% 6rem 20%;
     @media screen and (max-width: 768px) {
-      padding: 3rem 5% 6rem 20%;
+      padding: 3rem 5% 6rem 5%;
     }
   }
   .blog {
@@ -34,13 +34,37 @@
   .date {
     font-size: 1rem;
     color: $top;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.3rem;
   }
   .content :global(p) {
     margin: 0.75rem 0;
+    color: $top;
+    font-size: 1.4rem;
   }
   .content :global(a) {
     color: $highlight;
+  }
+  .content :global(h2) {
+    margin: 5rem 0 1.5rem 0;
+  }
+  .content :global(h2) :global(a) {
+    color: $highlight;
+    text-decoration: none;
+  }
+  .content :global(ul) {
+    color: $top;
+    list-style-type: square;
+    font-size: 1.4rem;
+  }
+  .content :global(ul) :global(li) {
+    margin: 0.5rem 0;
+  }
+  .content :global(ul) :global(li)::marker {
+    color: $highlight;
+  }
+  .content :global(img) {
+    border-radius: 12px;
+    margin: 0 0 1.5rem 0;
   }
 </style>
 
@@ -67,7 +91,6 @@
 <HeaderDesktop />
 <div class="page">
   <article class="blog">
-    <p class="title">{data.title}</p>
     <p class="date">{data.date}</p>
     <div class="content">
       <svelte:component this={data.content} />
