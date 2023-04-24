@@ -1,12 +1,9 @@
-# Project Showcase on Svelte
+# Project Showcase and Personal Website
 
-## Developing
+Made using sveltekit and mdsvex.
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
+Hosted at
 https://alec.parkes.dev
+
+This project is not licensed for reuse.
+
