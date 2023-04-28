@@ -69,7 +69,7 @@
 </svelte:head>
 <Parallax>
   <section class="intro" role="contentinfo" aria-label="Intro about me">
-    <img src="/alec.png" alt="Alec Parkes" width="160" height="160" />
+    <img src="/alec.jpg" alt="Alec Parkes" width="160" height="160" />
     <div class="intro-flex">
       <h3>Web Developer <span class="slash">\</span></h3>
       <h3>Client Communications <span class="slash">\</span></h3>
