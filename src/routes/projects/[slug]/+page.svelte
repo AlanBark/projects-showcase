@@ -16,7 +16,7 @@
     min-height: 100vh;
     width: 100%;
     margin: 0;
-    padding: 3rem 20% 6rem 20%;
+    padding: 3rem 30% 6rem 30%;
     @media screen and (max-width: 768px) {
       padding: 3rem 5% 6rem 5%;
     }
