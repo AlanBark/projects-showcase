@@ -66,6 +66,9 @@
     border-radius: 12px;
     margin: 0 0 1.5rem 0;
   }
+  .content :global(.language-makefile) {
+    margin: 2rem 0 0 0;
+  }
 </style>
 
 <svelte:head>
