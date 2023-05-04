@@ -16,6 +16,8 @@ I'm not going to sugarcoat it, compatability will be an issue, and if you are re
 
 With that being said, lets get into it, we're going to be recreating the parallax effect from [my homepage](/).
 
+If you'd like to follow along, the final codepen is [here](https://codepen.io/alanbark/pen/LYgOmwd?editors=1100)
+
 ## Parallax explained
 
 Creating a 3D parallax effect aims to emulate perspective on a web page. As the user scrolls down the page, their perspective is lowered. This creates the effect of things in the 'foreground' moving much faster than things in the 'background'. 
@@ -281,6 +283,8 @@ Text is fairly straight forward. Absolutely position the text layer just like an
 One thing you might notice is that positioning the content layer further back results in the entire page scrolling slower, and by extension smoother. This creates a better looking graphic, however users are not expecting their scrolling to be twice as slow. This can be a bit jarring, especially on mobile. I'm not saying not to do it, but its something to consider.
 
 ## Wrapping up
+
+[Final Codepen](https://codepen.io/alanbark/pen/LYgOmwd?editors=1100)
 
 I hope this guide helped, you can check out some of my other work [here](/projects)
 
