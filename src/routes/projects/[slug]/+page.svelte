@@ -69,6 +69,16 @@
   .content :global(.language-makefile) {
     margin: 2rem 0 0 0;
   }
+  .content :global(blockquote) {
+    margin: 2rem 0 2rem 0;
+    padding: 0.5rem 1rem;
+    border-left: 0.5rem solid $highlight;
+    background-color: rgba(30, 156, 116, 0.1);
+    border-radius: 12px;
+  }
+  .content :global(blockquote) :global(p) {
+    color: rgb(233, 233, 233);
+  }
 </style>
 
 <svelte:head>
