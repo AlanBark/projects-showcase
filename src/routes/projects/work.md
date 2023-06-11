@@ -6,6 +6,10 @@ thumbnail: "/sdl-min.png"
 description: "A collection of experiences and projects from my time at SDL Technology"
 ---
 
+# [INTELICS](https://intelics.com.au/)
+
+I started my employment at INTELICS in May of 2023. This is my current place of employment.
+
 # [SDL Technology](https://sdltechnology.com.au/)
 
 I started my employment at SDL Technology in Janurary of 2021. I was hired as a Web Developer, but quickly branched out to take on a number of roles, including client communications, graphic design and handling deployments.
