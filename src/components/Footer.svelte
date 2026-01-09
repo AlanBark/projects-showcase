@@ -73,7 +73,7 @@
     </ul>
   </div>
   <div class="links copywrite">
-    <p>© 2023 Alec Parkes</p>
+    <p>© {new Date().getFullYear()} Alec Parkes</p>
     <p>This website is hosted using <a href="https://vercel.com" target="_blank" rel="noreferrer">Vercel</a> and was made in <a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">Sveltekit</a></p>
   </div>
 </div>
