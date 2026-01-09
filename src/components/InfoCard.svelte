@@ -3,6 +3,7 @@
   export let title: string;
   export let text: string;
   export let link: string;
+  export let showReadMore: boolean = true;
 </script>
 <style lang="scss">
 
@@ -75,8 +76,10 @@
   <slot />
   <h2 class="card-title">{title}</h2>
   <p class="card-text">{text}</p>
+  {#if showReadMore}
   <div class="card-link">
     <a href={link}>Read more</a>
       <ArrowForwardOutline size="20"/>
   </div>
+  {/if}
 </a>

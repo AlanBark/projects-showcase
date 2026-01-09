@@ -99,15 +99,15 @@
   <section class="information" role="contentinfo" aria-label="Information about me">
     <div class="info-grid parent-grid">
       <div class="info-grid">
-        <InfoCard title="Web Development" text="React, Svelte and Vue, Java, Python and PHP. Web development has been my focus for the last few years" link="/projects/webDevelopment">
+        <InfoCard title="Web Development" text="React, Svelte and Vue, Java, Python and PHP. Web development has been my focus for the last few years" link="/projects">
           <LogoReact size="40" />
         </InfoCard>
-        <InfoCard title="Work"  text="5 Years of professional experience developing, deploying and working with clients" link="/projects/work">
+        <InfoCard title="Work"  text="5 Years of professional experience developing, deploying and working with clients" link="/contact" showReadMore={false}>
           <CodeSlashOutline size="40" />
         </InfoCard>
       </div>
       <div class="info-grid">
-        <InfoCard title="Education"  text="Bachelor of IT in Computer Science - 6.6 GPA - QUT Dec 2022" link="/projects/education">
+        <InfoCard title="Education"  text="Bachelor of IT in Computer Science - 6.6 GPA - QUT Dec 2022" link="/contact" showReadMore={false}>
           <SchoolOutline size="40" />
         </InfoCard>
         <InfoCard title="Mobile, Desktop & More"  text="From JS to C, AWS to single gate chips. If it runs code, I'm interested." link="/projects">
